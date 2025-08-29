@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday Adventure Quiz 2.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Holiday Adventure Quiz 2.0</h1>
+
+    <!-- Kalender -->
+<div id="calendar" class="calendar"></div>
+
+<!-- Popup für Frage -->
+<div id="question-popup" class="popup hidden">
+  <h2 id="question-date"></h2>
+  <p id="question-text"></p>
+  <input type="text" id="answer-input" placeholder="Antwort eingeben">
+  <button id="save-btn">Antwort speichern</button>
+  <p id="feedback"></p>
+  <button id="close-popup">Schließen</button>
+</div>
+    
+    <!-- Fragenbereich -->
+    <div id="quiz-screen">
+      <h2 id="question-title"></h2>
+      <p id="question-text"></p>
+      <input type="text" id="answer-input" placeholder="Antwort eingeben">
+      <button id="save-btn">Antwort speichern</button>
+      <p id="feedback"></p>
+    </div>
+
+    <!-- Noch nicht freigeschaltet -->
+    <div id="locked-screen" class="hidden">
+      <h2>⏳ Diese Frage ist noch nicht freigeschaltet!</h2>
+      <p>Bitte schau am richtigen Tag wieder vorbei.</p>
+    </div>
+
+    <!-- Lösungsmenu -->
+    <div id="solution-screen" class="hidden">
+      <h2>Finale Lösung 🎉</h2>
+      <input type="text" id="solution-input" placeholder="Endlösung eingeben">
+      <button id="solution-btn">Prüfen</button>
+      <p id="solution-feedback"></p>
+    </div>
+
+    <!-- Win Screen -->
+    <div id="win-screen" class="hidden">
+      <h2>Gewonnen! 🎉</h2>
+      <p>Uhrzeit: <span id="time"></span></p>
+      <button id="share-btn">Teilen</button>
+      <canvas id="win-canvas" width="400" height="300" class="hidden"></canvas>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
